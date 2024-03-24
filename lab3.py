@@ -1,12 +1,14 @@
-# Task 7
-from square_generator import SquareGenerator
+# Task 8
 
-generator = SquareGenerator()
+from cubic_generator import CubicGenerator
+
+# Example usage of the CubicGenerator class
+generator = CubicGenerator()
 start = 1
 end = 10
 
 try:
-    squares = generator.generate_squares(start, end)
-    print("List of squares from", start, "to", end, ":", squares)
+    cubes = generator.generate_cubes(start, end)
+    print("List of cubes from", start, "to", end, ":", cubes)
 except ValueError as e:
     print("Error:", e)
