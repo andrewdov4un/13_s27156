@@ -1,5 +1,3 @@
-# Task 9
-
 from cubic_generator import CubicGenerator
 
 # Example usage of the CubicGenerator class
@@ -8,7 +6,7 @@ start = 1
 end = 10
 
 try:
-    cubes = generator.generate_cubes(start, end)
-    print("List of cubes from", start, "to", end, ":", cubes)
+    squares = generator.generate_squares(start, end)
+    print("List of squares from", start, "to", end, ":", squares)
 except ValueError as e:
     print("Error:", e)
