@@ -1,23 +1,20 @@
-import math
-
-# Task 4
-
+# Task 5
 class SquareGenerator:
     def generate_squares(self, start, end):
 
-        squares = [x**2 for x in range(start, end + 1)]
+        if end < start:
+            raise ValueError("End of range must be greater than or equal to start")
+
+        squares = [x ** 2 for x in range(start, end + 1)]
         return squares
 
-    def calculate_square_roots(self, numbers):
-
-        square_roots = [math.sqrt(x) for x in numbers]
-        return square_roots
 
 generator = SquareGenerator()
-start = 1
-end = 10
-squares = generator.generate_squares(start, end)
-print("List of squares from", start, "to", end, ":", squares)
+start = 10
+end = 1
 
-square_roots = generator.calculate_square_roots(squares)
-print("Square roots of the generated squares:", square_roots)
+try:
+    squares = generator.generate_squares(start, end)
+    print("List of squares from", start, "to", end, ":", squares)
+except ValueError as e:
+    print("Error:", e)
