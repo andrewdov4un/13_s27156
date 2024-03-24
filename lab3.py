@@ -1,4 +1,4 @@
-# Task 6
+# Task 7
 from square_generator import SquareGenerator
 
 generator = SquareGenerator()
